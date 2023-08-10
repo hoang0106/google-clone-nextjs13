@@ -1,5 +1,5 @@
+import Footer from '@/components/Footer'
 import './globals.css'
-import Head from './head'
 
 export default function RootLayout({ children }) {
   return (
@@ -8,8 +8,12 @@ export default function RootLayout({ children }) {
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <Head />
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Footer */}
+        <Footer />
+        {/* Scripts */}
+      </body>
     </html>
   )
 }
